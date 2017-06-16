@@ -1,0 +1,4 @@
+{
+   "type" : "enum",
+   "name" : "Documento", "namespace": "ar.com.caeycae.avro", "symbols" : [ "DNI", "LU" ]
+}

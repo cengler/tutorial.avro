@@ -41,14 +41,14 @@ public class TestParser {
         datumWriter = new GenericDatumWriter<>(schema);
 
         dataFileWriter = new DataFileWriter<>(datumWriter);
-        dataFileWriter.create(schema, new File("empleados.avro"));
+        dataFileWriter.create(schema, new File("empleados2.avro"));
 
         dataFileWriter.append(e1);
         dataFileWriter.close();
 
         datumReader = new GenericDatumReader<>(schema);
         dataFileReader = new DataFileReader<>(
-                new File("empleados.avro"), datumReader);
+                new File("empleados2.avro"), datumReader);
         GenericRecord emp = null;
 
         while (dataFileReader.hasNext()) {
